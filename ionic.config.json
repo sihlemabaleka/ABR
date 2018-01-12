@@ -1,0 +1,8 @@
+{
+  "name": "AfricanBusinessRadio",
+  "app_id": "6f5159ed",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
