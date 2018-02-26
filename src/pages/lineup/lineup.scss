@@ -1,0 +1,66 @@
+page-lineup {
+
+        
+        $song-card-height: 90px;
+ 
+        ion-list {
+ 
+            margin-bottom: $song-card-height + 50px;
+ 
+            .alternate {
+                background-color: map-get($colors, light);
+                color: map-get($colors, dark)
+            }
+ 
+            .playing {
+ 
+                background-color: map-get($colors, dark);
+ 
+                img {
+                    opacity: 0.4;
+                }
+            }
+        }
+ 
+        ion-avatar {
+            position: relative;
+        }
+ 
+        ion-spinner {
+            position: absolute;
+            color: map-get($colors, light);
+            top: 0;
+            left: 0;
+            margin: 4px !important;        
+        }
+ 
+        [ion-item] {
+            background-color: #fff;
+            color: map-get($colors, dark);
+            padding: 20px;
+        }
+ 
+        ion-card {
+            background-color: map-get($colors, light);
+            color: map-get($colors, dark);
+            text-align: center;
+            height: $song-card-height;
+            bottom: 0;
+        }
+        
+ 
+        ion-footer {
+            height: 75px;
+            background-color: map-get($colors, dark);
+ 
+            ion-grid, ion-row, ion-col {
+                height: 100%;
+            }
+ 
+            ion-col {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+}

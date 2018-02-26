@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Programs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="card-background-page">
+        <ion-card>
+            <img src="http://www.africabusinessradio.com/wp-content/uploads/2017/08/ABR-Advertise-Here-2.jpg" />
+            <div class="card-title">Programs</div>
+            <div class="card-subtitle">41 Listings</div>
+        </ion-card>
+    </div>
+    <ion-list>
+        <ion-list-header>
+            Programs
+        </ion-list-header>
+        <button detail-none ion-item *ngFor="let track of tracks; let i = index;" (click)="track.playing ? pauseTrack(track) : playTrack(track)">
+            <ion-avatar item-left>
+                <img src={{track.thumbnail}}>
+                <ion-spinner item-right *ngIf="track.playing" name="bubbles" item-left></ion-spinner>
+            </ion-avatar>
+            <p><b>{{track.title}}</b></p>
+            <p>{{track.artist}}</p>
+        </button>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-2>
+                <button *ngIf="!currentTrack.playing" (click)="playTrack(currentTrack)" color="light" clear ion-button icon-only><ion-icon name="play-outline"></ion-icon></button>
+                <button *ngIf="currentTrack.playing" (click)="pauseTrack(currentTrack)" color="light" clear ion-button icon-only><ion-icon name="pause-outline"></ion-icon></button>
+            </ion-col>
+            <ion-col col-10>
+                <p style="color: whitesmoke" item-left>{{currentTrack.title}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

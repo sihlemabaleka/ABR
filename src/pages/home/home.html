@@ -3,16 +3,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>ABR Live</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content no-padding style="background-color: #330000;">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-list no-padding class="card-background-page">
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <div padding style="background-color: #fff">
+      <div padding>
+        <img width="100%" src="http://www.africabusinessradio.com/wp-content/uploads/2017/09/ABR_new.png" no-padding/>
+      </div>
+    </div>
+    <div class="card" (click)="goToPrograms()">
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-saopaolo.png" no-padding/>
+      <div class="card-title">Line-Up</div>
+      <div class="card-subtitle">41 Listings</div>
+    </div>
+    <div class="card">
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/card-amsterdam.png" />
+      <div class="card-title">Podcasts</div>
+      <div class="card-subtitle">64 Listings</div>
+    </div>
+  </ion-list>
 </ion-content>
